@@ -1,0 +1,72 @@
+<h2>Calendar Rules</h2>
+
+<div class="arrayFormDiv" ng-repeat="row in calendarForm.calendarRules">
+  <select ng-model="row.dayoftheweek" ng-change="calendarForm.calendarCheck(row)" name="dayoftheweekForm" id="dayoftheweek" required>
+    <option value="" disabled selected>Please Select a Day</option>
+    <option value="Monday">Monday</option>
+    <option value="Tuesday">Tuesday</option>
+    <option value="Wednesday">Wednesday</option>
+    <option value="Thursday">Thursday</option>
+    <option value="Friday">Friday</option>
+    <option value="Saturday">Saturday</option>
+    <option value="Sunday">Sunday</option>
+  </select>
+
+  <label for="starttime">Start Time</label>
+  <input
+    ng-change="calendarForm.dateTimeFilter(row)"
+    ng-model="row.calendarStartDateTime"
+    type="time"
+    step="1"
+    id="starttime"
+  />
+
+  <label for="endtime">End Time</label>
+  <input
+    ng-change="calendarForm.dateTimeFilter(row)"
+    ng-model="row.calendarEndDateTime"
+    type="time"
+    step="1"
+    id="endtime"
+  />
+
+  <!-- validinputs -->
+  <div ng-show="row.showingValidInputs">
+    <label for="validfrom">Valid From</label>
+    <input
+      ng-change="calendarForm.dateTimeFilter(row)"
+      ng-model="row.calendarValidfromDateTime"
+      type="datetime-local"
+      step="1"
+      name="validfrom"
+      id="validfrom"
+    >
+    <label for="validuntil">Valid Until</label>
+    <input
+      ng-change="calendarForm.dateTimeFilter(row)"
+      ng-model="row.calendarValiduntilDateTime"
+      type="datetime-local"
+      step="1"
+      name="validuntil"
+      id="validuntil"
+    >
+  </div>
+
+  <a
+    ng-click="calendarForm.showValidInputs(row)"
+    ng-hide="row.showingValidInputs"
+    class="marginMe"
+    href="#"
+  >+ Add Valid From and To Dates</a>
+
+</div>
+
+<a class="marginMe" href="#" ng-click="calendarForm.addAnotherDay('calendar')">+ Add another Day</a>
+
+<button type="button" ng-click="calendarForm.addRules('calendar')">Create Calendar Rules</button>
+
+<button type="button" ng-click="calendarForm.clearRules('calendar')">Clear / Delete Calendar Rules</button>
+
+<button type="button" ng-click="calendarForm.deleteAll()">Clear / Delete All</button>
+
+<textarea ng-if="calendarForm.createCalendarOutput" name="newCalendarOutput" id="newCalendarOutput">{{ calendarForm.createCalendarOutput }}</textarea>

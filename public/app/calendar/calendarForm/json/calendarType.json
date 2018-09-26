@@ -1,0 +1,32 @@
+[
+    {
+      "label": "Company",
+      "value": "company",
+      "errorMessage": "You cannot select anything else with Company"
+    },
+    {
+      "label": "Company Service",
+       "value": "companyService",
+       "errorMessage": "You cannot select anything else with Company Service"
+    },
+    {
+      "label": "IPC",
+       "value": "ipc",
+       "errorMessage": "true"
+    },
+    {
+      "label": "IPC Service",
+       "value": "ipcService",
+       "errorMessage": "true"
+    },
+    {
+      "label": "Service",
+      "value": "service",
+      "errorMessage": "true"
+    },
+    {
+      "label": "Service Payment",
+      "value": "servicePayment",
+      "errorMessage": "true"
+    }
+]

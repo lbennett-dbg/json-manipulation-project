@@ -1,0 +1,60 @@
+h1 {
+  text-align: center;
+}
+
+fieldset {
+  margin: 20px 0;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+input[type="time"],
+input[type="date"],
+input[type="text"] {
+  width: 100%;
+}
+
+input[type="checkbox"],
+input[type="datetime-local"],
+label {
+  display: inline-block;
+  margin: 10px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+}
+
+a {
+  text-align: center;
+  display: block;
+  text-decoration: none;
+}
+
+.arrayFormDiv {
+  padding: 30px 0;
+  margin: 30px 0;
+  border-bottom: 1px solid black;
+}
+
+.marginMe {
+  margin: 30px 0;
+}
+
+textarea {
+  width: 100%;
+}
+
+#newCalendarOutput {
+  height: 1000px;
+}
+
+.error {
+  background: red;
+  color: white;
+}

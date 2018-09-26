@@ -1,0 +1,257 @@
+{
+    "servicetype": "StandardTermPatentRenewal",
+    "territory":"ES",
+    "calendarType": "companyService",
+    "company": "Lidermark Patentes Y Marcas",
+    "companyId": null,
+    "holidayRules": [
+        {
+            "startDate": "2017-08-01",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-01",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-02",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-02",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-03",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-03",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-04",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-04",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-05",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-05",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-06",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-06",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-07",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-07",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-08",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-08",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-09",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-09",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-10",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-10",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-11",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-11",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-12",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-12",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-13",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-13",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-14",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-14",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-15",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-15",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-16",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-16",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-17",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-17",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-18",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-18",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-19",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-19",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-20",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-20",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-21",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-21",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-22",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-22",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-23",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-23",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-24",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-24",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-25",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-25",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-26",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-26",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-27",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-27",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-28",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-28",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-29",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-29",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-30",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-30",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        },
+        {
+            "startDate": "2017-08-31",
+            "startTime": "14:00:00",
+            "endDate": "2017-08-31",
+            "endTime": "20:00:00",
+            "year": null,
+            "type": "holiday"
+        }
+    ]
+}

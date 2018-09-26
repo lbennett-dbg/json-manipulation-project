@@ -1,0 +1,44 @@
+<h1>JSON Calendar Generator</h1>
+
+<form action="" name="calendarGeneratorForm">
+
+  <fieldset ng-form="calendarGeneratorForm">
+    <legend>Calendar Type</legend>
+    <ul>
+      <li ng-repeat="type in calendarForm.possibleCalendarTypes">
+        <input
+          name="calendarType"
+          ng-change="calendarForm.onSelectedCalendarTypesTrackerChange(type.value)"
+          type="checkbox"
+          ng-model="calendarForm.selectedCalendarTypesTracker[type.value]"
+          value="{{type.value}}"/
+        >
+        <label>{{ type.label }}</label>
+        <p ng-show="">{{ type.errorMessage }}</p>
+      </li>
+    </ul>
+  </fieldset>
+
+  <company-name-id
+    data-company-name="calendarForm.newCalendar.companyName"
+    data-company-id="calendarForm.newCalendar.companyId"
+    ng-show="calendarForm.showCompanyTypeInputs">
+  </company-name-id>
+
+  <territory-drop-down
+    data-territory="calendarForm.newCalendar.territory"
+    ng-show="calendarForm.showTerritoryDropDown">
+  </territory-drop-down>
+
+  <timezone-drop-down data-timezone="calendarForm.newCalendar.timezone"></timezone-drop-down>
+
+  <button type="button" id="calendarRules" ng-click="calendarForm.showRules('calendarRules')">Calendar Rules</button>
+
+  <button type="button" id="holidayRules" ng-click="calendarForm.showRules('holidayRules')">Holiday Rules</button>
+
+  <calendar-rules-directive ng-show="calendarForm.showCalendarRulesOptions"></calendar-rules-directive>
+
+  <holiday-rules-directive ng-show="calendarForm.showHolidayRulesOptions"></holiday-rules-directive>
+
+
+</form>

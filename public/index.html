@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="dataInputApp" ng-strict-di>
+  <head>
+    <base href="/">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+
+    <!-- Stylsheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet"/> -->
+
+    <title>template</title>
+  </head>
+  <body>
+
+    <div ng-view></div>
+
+    <!-- Vendors -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.js"></script>
+    <script src="https://code.angularjs.org/1.7.2/angular-route.js"></script>
+
+    <!-- Angular App -->
+    <script src="app/module.dataInputApp.js"></script>
+    <script src="app/calendar/module.calendarApp.js"></script>
+
+    <!-- Configs -->
+    <script src="app/routing/configs/config.dataInputRouting.js"></script>
+
+    <!-- Controllers -->
+    <script src="app/home/controllers/controller.home.js"></script>
+    <script src="app/calendar/calendarForm/controllers/controller.CalendarForm.js"></script>
+    <script src="app/calendar/calendarFileSelect/controllers/controller.CalendarFileSelect.js"></script>
+    <script src="app/calendar/companyNameID/controllers/controller.CompanyNameId.js"></script>
+    <script src="app/calendar/territory/controllers/controller.Territory.js"></script>
+    <script src="app/calendar/timezone/controllers/controller.Timezone.js"></script>
+
+    <!-- Directives -->
+    <script src="app/calendar/calendarForm/calendarRules/directives/directive.calendarRules.js"></script>
+    <script src="app/calendar/calendarForm/holidayRules/directives/directive.holidayRules.js"></script>
+    <script src="app/calendar/companyNameID/directives/directive.companyNameId.js"></script>
+    <!-- <script src="app/calendar/calendarForm/directives/directive.ngModel.js"></script>  --><!-- to do with validation -->
+    <script src="app/calendar/territory/directives/directive.territory.js"></script>
+    <script src="app/calendar/timezone/directives/directive.timezone.js"></script>
+
+    <!-- Services -->
+    <script src="/app/calendar/calendarForm/services/service.calendarTypesData.js"></script>
+    <!-- <script src="/app/calendar/calendarForm/services/service.calendarTypesValidation.js"></script> -->
+    <script src="/app/calendar/territory/services/service.territoryData.js"></script>
+    <script src="/app/calendar/timezone/services/service.timezoneData.js"></script>
+
+
+  </body>
+</html>

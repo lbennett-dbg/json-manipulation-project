@@ -1,0 +1,59 @@
+<h2>Holiday Rules</h2>
+
+<div class="arrayFormDiv" ng-repeat="row in calendarForm.holidayRules">
+  <label for="startDate">Start Date</label>
+  <input
+    ng-change="calendarForm.dateTimeFilter(row)"
+    ng-model="row.holidayStartDateTime"
+    type="date"
+    id="startDate"
+  />
+
+  <label for="endDate">End Date</label>
+  <input
+    ng-change="calendarForm.dateTimeFilter(row)"
+    ng-model="row.holidayEndDateTime"
+    type="date"
+    id="endDate"
+  />
+
+  <label for="startTime">Start Time</label>
+  <input
+    ng-change="calendarForm.dateTimeFilter(row)"
+    ng-model="row.holidayStartTimeDateTime"
+    type="time"
+    step="1"
+    id="startTime"
+  />
+
+  <label for="endTime">End Time</label>
+  <input
+    ng-change="calendarForm.dateTimeFilter(row)"
+    ng-model="row.holidayEndTimeDateTime"
+    type="time"
+    step="1"
+    id="endTime"
+  />
+
+  <label for="year">Year</label>
+  <input
+    ng-change="calendarForm.dateTimeFilter(row)"
+    ng-model="row.holidayYearDateTime"
+    type="date"
+    id="year"
+  />
+
+  <label for="_holidayName">Comments</label>
+  <textarea ng-model="row._holidayName" name="_holidayName" id="_holidayName" cols="30" rows="10"></textarea>
+
+</div>
+
+<a class="marginMe" href="#" ng-click="calendarForm.addAnotherDay('holiday')">+ Add another Day</a>
+
+<button type="submit" ng-click="calendarForm.addRules('holiday')">Create Holiday Rules</button>
+
+<button type="button" ng-click="calendarForm.clearRules('holiday')">Clear / Delete Holiday Rules</button>
+
+<button type="button" ng-click="calendarForm.deleteAll()">Delete All</button>
+
+<textarea ng-if="calendarForm.newCalendarOutput" name="newCalendarOutput" id="newCalendarOutput">{{ calendarForm.newCalendarOutput }}</textarea>

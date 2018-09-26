@@ -1,0 +1,38 @@
+[
+  {
+    "reader_id": 1,
+    "name": "Marie",
+    "weeklyReadingGoal": "315",
+    "totalMinutesRead": 5600
+  },
+  {
+    "reader_id": 2,
+    "name": "Daniel",
+    "weeklyReadingGoal": "210",
+    "totalMinutesRead": 3000
+  },
+  {
+    "reader_id": 3,
+    "name": "Lanier",
+    "weeklyReadingGoal": "140",
+    "totalMinutesRead": 600
+  },
+  {
+    "reader_id": 200,
+    "name": "Luke",
+    "weeklyReadingGoal": "400",
+    "totalMinutesRead": 1045
+  },
+  {
+    "reader_id": 59,
+    "name": "Tom",
+    "weeklyReadingGoal": "50",
+    "totalMinutesRead": 92000
+  },
+  {
+    "reader_id": 84,
+    "name": "Ben",
+    "weeklyReadingGoal": "71",
+    "totalMinutesRead": 8400
+  }
+];

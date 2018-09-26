@@ -1,0 +1,16 @@
+<label for="territory">Territory</label>
+<select name="territoryDropDown" id="territory" ng-model="territoryDropDown.territory">
+  <option value="" disabled selected>Please Select a Territory</option>
+  <option ng-repeat="(key, value) in territoryDropDown.allTerritories" value="{{ key }}">{{ value }}</option>
+</select>
+
+<label for="timezone">Time Zone</label>
+<select name="timezoneDropDown" id="timezone" ng-options="timezones for timezones in territoryDropDown.allTimezones" ng-model="territoryDropDown.timezone">
+  <option value="" disabled selected>Please Select a Time Zone</option>
+</select>
+
+
+
+<!-- best so far - if use this need to switch key and value pairs in object -->
+<!-- ng-options="territory for (territory, value) in allTerritories" -->
+<!-- ng-required="required" -->

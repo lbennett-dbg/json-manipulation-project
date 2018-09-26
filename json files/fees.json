@@ -1,0 +1,40 @@
+{
+    "_note": "VLAHOVIC",
+    "effectiveFrom": {
+        "dateTime": "1583-01-01 00:00:00",
+        "timeZone": "UTC"
+    },
+    "company": "VLAHOVIC",
+    "addresses": [
+        {
+            "types": ["main", "billing"],
+            "address": {
+                "label": "Main address",
+                "details": {
+                    "companyName": "VLAHOVIC",
+                    "contactName": "",
+                    "address": "",
+                    "city": "",
+                    "postcode": "",
+                    "territory": "AL"
+                }
+            }
+        }
+    ],
+    "currency": "EUR",
+    "formula": "SimpleAmountPerItem",
+    "service": "StandardTermPatentRenewal_AL",
+    "type": "buying",
+    "requiredWorkingLeadTime": 4,
+    "defaultPurchaseTaxRate": "outputExempt",
+    "fees": [
+        {
+            "name": "BASE_AMOUNT",
+            "description": "Service Fee",
+            "value": 50
+        }
+    ],
+    "primaryUserEmails": [
+        "devmailbox+vlahovic@debanke.com"
+    ]
+}
