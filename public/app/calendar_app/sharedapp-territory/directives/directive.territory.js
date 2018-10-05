@@ -8,7 +8,7 @@
 
     return {
       restrict: 'E',
-      templateUrl: '/app/calendar/territory/partials/partial.territory.html',
+      templateUrl: '/app/calendar_app/sharedapp-territory/partials/partial.territory.html',
       controller: 'TerritoryController',
       controllerAs: 'territoryDropDown',
       bindToController: true,

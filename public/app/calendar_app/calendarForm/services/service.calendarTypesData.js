@@ -11,7 +11,7 @@
     function getCalendarTypeData() {
       return $http({
         method: 'GET',
-        url: 'app/calendar/calendarForm/json/calendarType.json'
+        url: 'app/calendar_app/calendarForm/json/calendarType.json'
       })
         .then(sendCalendarTypeResponseData)
         .catch(sendCalendarTypeError);

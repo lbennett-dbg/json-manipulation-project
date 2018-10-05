@@ -1,0 +1,185 @@
+<!-- <h1>JSON Calendar Generator</h1> -->
+
+<form action="" name="calendarGeneratorForm">
+
+  <fieldset data-ng-form="calendarGeneratorForm">
+    <legend>Calendar Type</legend>
+    <ul>
+      <li data-ng-repeat="type in calendarForm.possibleCalendarTypes">
+        <input
+          name="calendarType"
+          data-ng-change="calendarForm.onSelectedCalendarTypesTrackerChange(type.value)"
+          type="checkbox"
+          data-ng-model="calendarForm.selectedCalendarTypesTracker[type.value]"
+          value="{{type.value}}"/
+        >
+        <label>{{ type.label }}</label>
+        <p data-ng-show="">{{ type.errorMessage }}</p>
+      </li>
+    </ul>
+  </fieldset>
+
+  <div data-ng-if="calendarForm.showCompanyTypeInputs">
+      <label for="companyName">Company Name</label>
+      <input type="text" id="companyName" ng-model="calendarForm.newCalendar.companyName"/>
+
+      <label for="companyId">Company ID</label>
+      <input type="text" id="companyId" ng-model="calendarForm.newCalendar.companyId"/>
+  </div>
+
+  <territory-drop-down
+    data-territory="calendarForm.newCalendar.territory"
+    data-ng-show="calendarForm.showTerritoryDropDown">
+  </territory-drop-down>
+
+  <timezone-drop-down data-timezone="calendarForm.newCalendar.timezone"></timezone-drop-down>
+
+
+  <button type="button" id="calendarRules" data-ng-click="calendarForm.showRules('calendarRules')">Calendar Rules</button>
+
+  <button type="button" id="holidayRules" data-ng-click="calendarForm.showRules('holidayRules')">Holiday Rules</button>
+
+
+
+    <!-- Calendar Rules -->
+    <div data-ng-show="calendarForm.showCalendarRulesOptions">
+      <h2>Calendar Rules</h2>
+
+      <div class="arrayFormDiv" data-ng-repeat="row in calendarForm.calendarRules">
+        <select data-ng-model="row.dayoftheweek" data-ng-change="calendarForm.calendarCheck(row)" name="dayoftheweekForm" id="dayoftheweek" required>
+          <option value="" disabled selected>Please Select a Day</option>
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wednesday">Wednesday</option>
+          <option value="Thursday">Thursday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+          <option value="Sunday">Sunday</option>
+        </select>
+
+        <label for="starttime">Start Time</label>
+        <input
+          data-ng-change="calendarForm.dateTimeFilter(row)"
+          data-ng-model="row.calendarStartDateTime"
+          type="time"
+          step="1"
+          id="starttime"
+        />
+
+        <label for="endtime">End Time</label>
+        <input
+          data-ng-change="calendarForm.dateTimeFilter(row)"
+          data-ng-model="row.calendarEndDateTime"
+          type="time"
+          step="1"
+          id="endtime"
+        />
+
+        <!-- validinputs -->
+        <div data-ng-show="row.showingValidInputs">
+          <label for="validfrom">Valid From</label>
+          <input
+            data-ng-change="calendarForm.dateTimeFilter(row)"
+            data-ng-model="row.calendarValidfromDateTime"
+            type="datetime-local"
+            step="1"
+            name="validfrom"
+            id="validfrom"
+          >
+          <label for="validuntil">Valid Until</label>
+          <input
+            data-ng-change="calendarForm.dateTimeFilter(row)"
+            data-ng-model="row.calendarValiduntilDateTime"
+            type="datetime-local"
+            step="1"
+            name="validuntil"
+            id="validuntil"
+          >
+        </div>
+
+        <a
+          data-ng-click="calendarForm.showValidInputs(row)"
+          data-ng-hide="row.showingValidInputs"
+          class="marginMe"
+          href="#"
+        >+ Add Valid From and To Dates</a>
+
+      </div>
+
+      <a class="marginMe" href="#" data-ng-click="calendarForm.addAnotherDay('calendar')">+ Add another Day</a>
+
+      <button type="button" data-ng-click="calendarForm.addRules('calendar')">Create Calendar Rules</button>
+
+      <button type="button" data-ng-click="calendarForm.clearRules('calendar')">Clear / Delete Calendar Rules</button>
+
+      <button type="button" data-ng-click="calendarForm.deleteAll()">Clear / Delete All</button>
+
+      <textarea data-ng-if="calendarForm.createCalendarOutput" name="newCalendarOutput" id="newCalendarOutput">{{ calendarForm.createCalendarOutput }}</textarea>
+    </div>
+
+    <!-- Holiday Rules -->
+    <div data-ng-show="calendarForm.showHolidayRulesOptions">
+        <h2>Holiday Rules</h2>
+
+        <div class="arrayFormDiv" ng-repeat="row in calendarForm.holidayRules">
+          <label for="startDate">Start Date</label>
+          <input
+            ng-change="calendarForm.dateTimeFilter(row)"
+            ng-model="row.holidayStartDateTime"
+            type="date"
+            id="startDate"
+          />
+
+          <label for="endDate">End Date</label>
+          <input
+            ng-change="calendarForm.dateTimeFilter(row)"
+            ng-model="row.holidayEndDateTime"
+            type="date"
+            id="endDate"
+          />
+
+          <label for="startTime">Start Time</label>
+          <input
+            ng-change="calendarForm.dateTimeFilter(row)"
+            ng-model="row.holidayStartTimeDateTime"
+            type="time"
+            step="1"
+            id="startTime"
+          />
+
+          <label for="endTime">End Time</label>
+          <input
+            ng-change="calendarForm.dateTimeFilter(row)"
+            ng-model="row.holidayEndTimeDateTime"
+            type="time"
+            step="1"
+            id="endTime"
+          />
+
+          <label for="year">Year</label>
+          <input
+            ng-change="calendarForm.dateTimeFilter(row)"
+            ng-model="row.holidayYearDateTime"
+            type="date"
+            id="year"
+          />
+
+          <label for="_holidayName">Comments</label>
+          <textarea ng-model="row._holidayName" name="_holidayName" id="_holidayName" cols="30" rows="10"></textarea>
+
+        </div>
+
+        <a class="marginMe" href="#" ng-click="calendarForm.addAnotherDay('holiday')">+ Add another Day</a>
+
+        <button type="submit" ng-click="calendarForm.addRules('holiday')">Create Holiday Rules</button>
+
+        <button type="button" ng-click="calendarForm.clearRules('holiday')">Clear / Delete Holiday Rules</button>
+
+        <button type="button" ng-click="calendarForm.deleteAll()">Delete All</button>
+
+        <textarea ng-if="calendarForm.newCalendarOutput" name="newCalendarOutput" id="newCalendarOutput">{{ calendarForm.newCalendarOutput }}</textarea>
+
+    </div>
+
+
+</form>

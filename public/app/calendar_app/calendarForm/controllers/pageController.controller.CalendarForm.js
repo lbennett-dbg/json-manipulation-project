@@ -10,6 +10,14 @@
         vm.selectedCalendarTypesTracker = {};
         vm.newCalendar = {servicetype: "StandardTermPatentRenewal"}; //new calendar object
 
+        vm.onSelectedCalendarTypesTrackerChange = onSelectedCalendarTypesTrackerChange;
+        vm.showRules = showRules;
+        vm.dateTimeFilter = dateTimeFilter;
+        vm.showValidInputs = showValidInputs;
+        vm.addAnotherDay =addAnotherDay;
+        vm.addRules = addRules;
+        vm.clearRules = clearRules;
+        vm.deleteAll = deleteAll;
 
 
         calendarTypesDataService.getCalendarTypeData()
@@ -27,7 +35,7 @@
 
 
 
-        vm.onSelectedCalendarTypesTrackerChange = function(value) {
+        function onSelectedCalendarTypesTrackerChange(value) {
             if ( value !== 'company' && vm.selectedCalendarTypesTracker.company ) {
                 console.log("You cannot select anything else with Company");
                 // return true;
@@ -160,7 +168,7 @@
 
       //calendar Rules
       //show Rules
-      vm.showRules = function(rules) {
+      function showRules(rules) {
         if(rules === 'calendarRules') {
           vm.showCalendarRulesOptions = !vm.showCalendarRulesOptions;
           if ( vm.calendarRulesOptions && vm.holidayRulesOptions ) {
@@ -175,7 +183,7 @@
       }
 
       //filters the datetime into a time value of hh:mm:ss
-      vm.dateTimeFilter = function(row) {
+      function dateTimeFilter(row) {
         //calendarfilters
         row.starttime = $filter('date')(row.calendarStartDateTime, 'HH:mm:ss');
         row.endtime = $filter('date')(row.calendarEndDateTime, 'HH:mm:ss');
@@ -263,12 +271,12 @@
 
       //starts out false
       //show valid showValidInputs
-      vm.showValidInputs = function(row) {
+      function showValidInputs(row) {
         row.showingValidInputs = !row.showingValidInputs
       }
 
       //adds a new day in the calendarRules array
-      vm.addAnotherDay = function(array) {
+      function addAnotherDay(array) {
           var newDay = [];
         if( array === 'calendar' ) {
           newDay = rulesTemplate(array);
@@ -279,7 +287,7 @@
         }
       }
 
-      vm.addRules = function(rules) {
+      function addRules(rules) {
         if ( vm.newCalendar.timezone ) {
           if ( rules === 'calendar' ) {
               vm.newCalendar.calendarRules = vm.calendarRules;
@@ -305,7 +313,7 @@
 
 
 
-      vm.clearRules = function(rules) {
+      function clearRules(rules) {
         if ( rules === 'calendar' && vm.createCalendarOutput ) {
           vm.createCalendarOutput = JSON.parse(vm.createCalendarOutput);
           delete vm.newCalendar.calendarRules;
@@ -345,7 +353,7 @@
         $log.info('All Calendars Cleared.');
       }
 
-      vm.deleteAll = function() {
+      function deleteAll() {
         if ( vm.createCalendarOutput ) {
           vm.createCalendarOutput = JSON.parse(vm.createCalendarOutput);
           delete vm.createCalendarOutput;

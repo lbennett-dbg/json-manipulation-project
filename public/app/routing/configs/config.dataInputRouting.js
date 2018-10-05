@@ -8,20 +8,20 @@
 
       $routeProvider
         .when('/', {
-          templateUrl: '/app/home/templates/home.html',
-          controller: 'HomeController',
-          controllerAs: 'home'
-        })
-        .when('/CalendarFileSelect', {
-          templateUrl: '/app/calendar/calendarFileSelect/templates/template.calendarFileSelect.html',
-          controller: 'CalendarFileSelectController',
-          controllerAs: 'calendarFileSelect'
-        })
-        .when('/CalendarForm', {
-          templateUrl: '/app/calendar/calendarForm/templates/template.calendarForm.html',
+          templateUrl: '/app/calendar_app/calendarForm/views/view.calendarForm.html',
           controller: 'CalendarFormController',
           controllerAs: 'calendarForm'
         })
+        // .when('/CalendarFileSelect', {
+        //   templateUrl: '/app/calendar/calendarFileSelect/templates/template.calendarFileSelect.html',
+        //   controller: 'CalendarFileSelectController',
+        //   controllerAs: 'calendarFileSelect'
+        // })
+        // .when('/CalendarForm', {
+        //   templateUrl: '/app/calendar/calendarForm/templates/template.calendarForm.html',
+        //   controller: 'CalendarFormController',
+        //   controllerAs: 'calendarForm'
+        // })
         .otherwise('/');
 
     }])
