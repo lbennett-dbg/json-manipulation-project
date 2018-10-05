@@ -14,7 +14,7 @@
           value="{{type.value}}"/
         >
         <label>{{ type.label }}</label>
-        <p data-ng-show="">{{ type.errorMessage }}</p>
+        <p data-ng-if="type.errorMessage">{{ type.errorMessage }}</p>
       </li>
     </ul>
   </fieldset>
@@ -42,7 +42,7 @@
 
 
     <!-- Calendar Rules -->
-    <div data-ng-show="calendarForm.showCalendarRulesOptions">
+    <div data-ng-if="calendarForm.showCalendarRulesOptions">
       <h2>Calendar Rules</h2>
 
       <div class="arrayFormDiv" data-ng-repeat="row in calendarForm.calendarRules">
@@ -118,7 +118,7 @@
     </div>
 
     <!-- Holiday Rules -->
-    <div data-ng-show="calendarForm.showHolidayRulesOptions">
+    <div data-ng-if="calendarForm.showHolidayRulesOptions">
         <h2>Holiday Rules</h2>
 
         <div class="arrayFormDiv" ng-repeat="row in calendarForm.holidayRules">

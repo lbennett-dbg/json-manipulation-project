@@ -10,6 +10,7 @@
         vm.selectedCalendarTypesTracker = {};
         vm.newCalendar = {servicetype: "StandardTermPatentRenewal"}; //new calendar object
 
+        //Functions
         vm.onSelectedCalendarTypesTrackerChange = onSelectedCalendarTypesTrackerChange;
         vm.showRules = showRules;
         vm.dateTimeFilter = dateTimeFilter;
@@ -18,7 +19,6 @@
         vm.addRules = addRules;
         vm.clearRules = clearRules;
         vm.deleteAll = deleteAll;
-
 
         calendarTypesDataService.getCalendarTypeData()
             .then(getCalendarTypeDataSuccess)
@@ -32,12 +32,10 @@
             $log.error('Error Message: ' + errorMsg);
         }
 
-
-
-
         function onSelectedCalendarTypesTrackerChange(value) {
             if ( value !== 'company' && vm.selectedCalendarTypesTracker.company ) {
                 console.log("You cannot select anything else with Company");
+                vm.possibleCalendarTypes.errorMessage = "You cannot select anything else with Company";
                 // return true;
 
             } else if ( value !== 'companyService' && vm.selectedCalendarTypesTracker.companyService ) {
@@ -171,13 +169,13 @@
       function showRules(rules) {
         if(rules === 'calendarRules') {
           vm.showCalendarRulesOptions = !vm.showCalendarRulesOptions;
-          if ( vm.calendarRulesOptions && vm.holidayRulesOptions ) {
-            vm.holidayRulesOptions = false;
+          if ( vm.showCalendarRulesOptions && vm.showHolidayRulesOptions ) {
+            vm.showHolidayRulesOptions = false;
           }
         } else if(rules === 'holidayRules') {
-          vm.holidayRulesOptions = !vm.holidayRulesOptions;
-          if ( vm.calendarRulesOptions && vm.holidayRulesOptions ) {
-            vm.calendarRulesOptions = false;
+          vm.showHolidayRulesOptions = !vm.showHolidayRulesOptions;
+          if ( vm.showCalendarRulesOptions && vm.showHolidayRulesOptions ) {
+            vm.showCalendarRulesOptions = false;
           }
         }
       }
